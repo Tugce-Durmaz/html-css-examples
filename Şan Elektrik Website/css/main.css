@@ -1,0 +1,976 @@
+/*GENERAL SETTINGS*/
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('../fonts/Raleway-Regular.ttf');
+
+}
+
+body{
+	background:whitesmoke;
+	color: #3f3f3f;
+
+	font: 16px / 28px arial;
+	font-family:'Raleway' ;
+}
+
+h1{
+	font-size: 60px;
+	letter-spacing: 4px;
+	margin-bottom: 100px;
+	margin-left: 90px;
+  }
+
+.sectionHeader{
+	background: black;
+	border-bottom:6px solid:#000;
+	height: 60px;
+	color: rgba(224, 126, 39, .9);
+	display: inline-block;
+	line-height: 60px;
+	font-size: 24px;
+	padding: 5px 40px;
+	letter-spacing: 2px;
+	margin-bottom: 20px;
+
+
+}
+
+
+h3 {
+	font-size: 16px;
+	color: black;
+	transition: all .5s ease;
+
+}
+
+.sectionArea{
+	padding: 80px 0;
+
+}
+
+/*GRID SETTINGS*/
+
+.container {  /* class ı seçerken başına nokta koyarak çağırırız.*/
+
+width: 90%;
+margin: 0 auto;
+display:flex;
+
+/* container floot classında sayfanın yüzde doksanını kullanmak istediğinde kullanırsın.*/
+
+}
+
+
+.featuresBody .container  {
+	justify-content: space-between;
+}
+
+.col3{
+	flex-grow: 1;
+	width: 33.33%;
+}
+
+.col2{
+flex-grow: 1;
+width: 50%;
+padding: 20px;
+
+}
+
+
+.engineBody .container {
+	justify-content: space-between;
+
+}
+
+
+
+
+/* HOME SETTINGS*/
+
+header .logo{
+	margin-right: auto;
+
+}
+
+header .logo img{
+	display: block;
+   height: 86px;
+   margin-left: 170px;
+}
+
+.menu li {
+
+	float: left;
+
+}
+
+.menu li a{
+	padding: 30px 20px;
+	display: block; /* display block dediğimde yukarıdan ve aşağıdan verdiğim boşluklar çalıştı*/
+   text-decoration: none; /*alt çizgiyi kaldırdım yazıların altındaki*/
+   letter-spacing: 2px;
+   color: #333;
+   transition: all .5s ease;
+
+
+}
+
+
+.menu li:hover a {
+background: black;
+color: rgba(224, 126, 39, .9);
+
+
+}
+
+#mainSlider{   /* id olduğu için başına " #" işareti koyarak çağırırız.*/
+
+height: 500px;
+background: url('../img/main.jpg') center center no-repeat;
+background-size: cover;
+ }
+
+.slider{
+
+width: 100%;
+
+}
+
+#mainCaption{
+  
+	height: 420px;
+	background: rgba(0,0,0, .2);
+}
+
+.caption{
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	justify-content: center;
+	width: 100%;
+	color: white;
+
+   padding: 40px 200px;
+
+}
+
+.featuresTop{
+text-align: center;
+
+
+}
+.item{
+	padding: 10px 20px;
+
+}
+
+.zoom{
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	width: 100%;
+	vertical-align: top;
+   
+
+}
+
+.zoom img {
+	display: block;
+	width: 100%;
+	height: auto;
+transition: all .5s ease;
+
+}
+
+
+.item .itemText{
+	text-align: center;
+	padding: 5px;
+	border: 1px solid black;
+
+}
+
+.item:hover .zoom img {
+	transform: scale(1.25);
+}
+
+.item:hover h3 {
+color:rgba(224, 126, 39, .9);
+}
+
+.item:hover .itemText{
+	background: black;
+	color: whitesmoke;
+	transition: all .5s ease ;
+}
+
+.btnDetails{
+	color: black;
+	padding: 5px 10px;
+	text-decoration: none;
+	border: 1px solid black;
+	transition: all .5s ease;
+
+}
+
+.item:hover .btnDetails{
+	color: white;
+	border: 1px solid white;
+
+
+}
+
+.itemText p {
+
+	margin: 20px 0;
+}
+
+#parallax {
+	background: linear-gradient(
+	            rgba(0, 0, 0, .5),
+	            rgba(0, 0, 0,.5)   
+	              ),
+               url('../img/parallax.jpg');
+               background-attachment: fixed;
+               background-size: cover;
+               background-position: center; 
+               text-align: center;
+
+}
+
+
+ #parallax p {
+ 	color: #fff;
+
+
+}
+
+.engineTop{
+	text-align: center;
+
+}
+.engineContainer{
+	position: relative;
+	width: 100%;
+
+}
+
+.imageOver{
+	display: block;
+	width: 100%;
+	height: auto;
+
+}
+
+.engineOverlay{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0, .7);
+	width: 0;
+	height: 100%;
+	transition: .5s ease;
+
+}
+.engineContainer:hover .engineOverlay {
+	width: 100%;
+   
+}
+
+.engineText {
+	white-space: nowrap;
+	color: rgba(224, 126, 39, .9);
+	font-size: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% -50%);
+
+}
+
+.engineOverlay2{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 100%;
+	background-color: rgba(0,0,0, .7);
+	width: 0;
+	height: 100%;
+	transition: .5s ease;
+
+}
+.engineContainer:hover .engineOverlay2 {
+	width: 100%;
+   left: 0;
+
+}
+footer{
+	background-color: black;
+	text-align: center;
+
+
+}
+
+.footerItem{
+	padding: 20px;
+}
+
+.footerItem img {
+	height: 85px;
+	opacity: .8;
+}
+
+footer h3{
+	color: white;
+	font-size: 18px;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+
+}
+
+footer h5 {
+	color: whitesmoke;
+
+}
+
+	footer .fa{
+font-size: 30px;
+color: #95a5a6;
+line-height: 85px;
+transition: .3s ease;
+
+	}
+
+footer .fa:hover{
+color: white;
+
+}
+
+footer p {
+color: #95a5a6;
+line-height: 20px;
+
+}
+.footerLinks a {
+text-decoration: none;
+color: #95a5a6;
+letter-spacing: 2px;
+transition: .3s ease;
+
+}
+
+.footerLinks a:hover {
+	color: white;
+text-decoration: underline;
+
+}
+
+.socialLinks li {
+display: inline-block;
+width: 50px;
+height: 50px;
+
+
+
+}
+
+
+/* CARS SETTİNGS */
+
+
+#şanelektrikSlider {   /* id olduğu için başına " #" işareti koyarak çağırırız.*/
+
+height: 250px;
+background: url('../img/slideImage.jpg') center center no-repeat;
+background-size: cover;
+ }
+
+
+#şanelektrikCaption {
+  
+	height: 250px;
+	background: rgba(0,0,0, .8);
+}
+#inspect {
+
+	background-color: #f5f5f5;
+
+}
+
+.inspectTop {
+text-align: center;
+}
+
+.inspectBody .col2 {
+	display: flex;
+}
+.inspectImage {
+	width: 80%;
+
+}
+
+.inspectImage img {
+width: 100%;
+height: auto;
+
+}
+
+.inspectText {
+    width:20%;
+	padding-left: 10px;
+
+}
+
+.date{
+	color:#333 ;
+	font-size:12px;
+	font-style: italic;
+
+}
+
+h4 {
+color: rgba(224, 126, 39, .9);
+font-size: 14px;
+font-weight: bold;
+}
+
+.inspectText a {
+	float: right;
+	text-decoration: none;
+	color: rgba(224, 126, 39, .9);
+}
+
+.inspectText a:hover {
+	text-decoration: underline;
+
+}
+
+.projectXTop {
+	text-align: center;
+
+}
+
+#projectX .containerFluid {
+	height: 500px;
+	background: url('../img/parallax1.jpg') center center no-repeat;
+	background-size: cover;
+
+
+}
+
+
+.captionPX {
+	display: flex;
+	background: rgba(0,0,0 .8);
+	width: 100%;
+	height: 500px;
+
+}
+
+.projectXInfo {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	margin-left: 5%;
+	padding-right: 5%;
+	transform: translate(-50%, -50%);
+}
+
+.projectXTitle {
+font-size: 24px;
+letter-spacing: 2px;
+margin-bottom: 20px;
+
+}
+
+.projectXBTN {
+	background-color: rgba(224, 126, 39, .9) ;
+	cursor: pointer;
+	color: #fff;
+	padding: 20px 40px;
+	border: none;
+	margin-top: 20px;
+    transition: all .5s ease ;
+}
+
+.projectXBTN:hover {
+	background-color: white;
+	color: rgba(224, 126, 39, .9);
+}
+.projectXText { 
+
+color: white;
+
+ }
+
+ .projectXHightlight {
+display: inline-block;
+background-color: rgba(224, 126, 39, .9);
+padding: 30px;
+
+ }
+ .containerFluid .col2 {
+
+ 	padding: 0;
+ }
+
+ .projectXDetail {
+ 	color: white;
+
+ }
+
+ /*ABOUT SETTİNGS*/
+
+ #hakkımızdaSlider {   /* id olduğu için başına " #" işareti koyarak çağırırız.*/
+
+height: 250px;
+background: url('../img/slideImage2.jpg') center center no-repeat;
+background-size: cover;
+ }
+
+
+#hakkımızdaCaption {
+  
+	height: 250px;
+
+}
+
+#ourHistory {
+	background-color: #f5f5f5;
+}
+
+.ourHistoryTop {
+	text-align: center;
+
+}
+.ourHistoryBody .containerFluid {
+display: flex;
+justify-content: space-between;
+margin-bottom: 20px;
+
+
+}
+
+.ourHistoryBody .col2{
+	display: flex;
+
+
+}
+
+.ourHistoryDate{
+	flex: 0.5;
+	text-align: center;
+	background-color: black;
+	color: darkgoldenrod;
+ }
+
+
+ .ourHistoryDate p {
+ 	font-size: 30px;
+ 	letter-spacing: 2px;
+ 	position: relative;
+ 	top: 50%;
+ 	left: 50%;
+ 	transform: translate(-50%, -50%);
+ }
+
+ .ourHistoryImage {
+ 	flex: 2;
+
+ }
+
+ .ourHistoryImage img {
+  width: 50%;
+  height: 100%;
+
+
+ }
+.ourHistoryText {
+	flex: 3;
+ margin-left: 10px;
+}
+
+.ourHistoryText p {
+	position: relative;
+	top: 50%;
+	left: 27%;
+	transform: translate(-50%, -50%);
+}
+
+.teamTop{
+
+	text-align: center;
+
+}
+
+.teamBody .containerFluid{
+display: flex;
+width: 100%;
+
+}
+
+.teamMember{
+	position: relative;
+	width: 100%;
+}
+
+.teamMemberImg {
+	display:block;
+	width: 100%;
+	height: 100%;
+
+}
+
+.teamMemberOverlay {
+
+	position: absolute;
+	top :0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+width: 100%;
+opacity: 1;
+	background-color: rgba(224, 126, 39, .9);
+transition: .5s ease; 
+}
+
+.teamMember:hover .teamMemberOverlay {
+
+	opacity: 0;
+
+
+}
+
+.teamMember:hover .teamMemberInfo  {
+
+	color: white ;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+.teamTitle{
+
+	color: white ;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+.teamMemberInfo {
+	color: white;
+	background-color: rgba(224, 126, 39, .7);
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+    transition: .5s ease;
+    padding: 20px;
+    text-align: center;
+
+}
+.memberSocialLinks {
+	text-align: center;
+
+}
+
+.memberSocialLinks li {
+	display: inline;
+	margin-left: 5px;
+	margin-right: 5px;
+
+}
+
+.memberSocialLinks .fa {
+color: white;
+}
+
+
+/*CONTACT SETTINGS*/
+
+#contactSlider {   /* id olduğu için başına " #" işareti koyarak çağırırız.*/
+
+height: 250px;
+background: url('../img/slideImage4.jpg') center center no-repeat;
+background-size: cover;
+ }
+
+
+#contactCaption {
+  
+	height: 250px;
+
+}
+
+#gallery {
+	background-color: #f5f5f5;
+}
+
+
+.galleryTop {
+	text-align: center;
+
+}
+
+.gallerySlider {
+	overflow: hidden;
+	width: 100%;
+	margin: 0 auto;
+
+
+}
+
+.gallerySliderItem {
+width: 200%;
+position: relative;
+left: 0;
+animation: slideAnimation 30s infinite;
+}
+
+
+.gallerySliderItem img {
+	width: 33.33%;
+	float: left;
+	height: auto;
+}
+
+@keyframes slideAnimation {
+	0% { left:0; }
+	25% {left: -100%}
+	50% {left: -200%;}
+	75% { left: -100%; }
+	100% { left: 0; }
+}
+
+.contactTop {
+
+text-align: center;
+
+
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+
+}
+
+.contactForm {
+	margin: 0 auto;
+	width: 60%;
+
+}
+
+.formItem {
+	margin-bottom: 10px;
+	width: 70%;
+	padding: 10px 100px;
+}
+
+.formShape {
+	color: white;
+	float: left;
+	background: rgba(224, 126, 39, .9);
+	padding: 8%;
+	width: 2%;
+	text-align: center;
+
+}
+
+.formField {
+	color: white;
+	background: rgba(224, 126, 39, .9);
+	border: none;
+	padding: 15.5px;
+	width: 91.9%;
+	display: block;
+	font-size: 14px;
+
+}
+
+.formBtn {
+	display: block;
+	border: none;
+	background: rgba(224, 126, 39, .9);
+	color: white;
+	padding: 12px 25px;
+	cursor: pointer;
+	text-decoration: none ;
+	font-weight: bold;
+
+}
+
+.formBtn:hover {
+	background: rgba(224, 126, 39, .6);
+}
+
+/*MEDIA QUERIES*/
+
+@media secreen and (max-width: 960px) {
+	.caption h1 {
+
+		
+		font-size: 32px;
+		letter-spacing: 2px;
+
+		
+	}
+
+	.inspectBody .container{
+		flex-direction: column;
+
+	}
+
+	.inspectBody .container .col2 {
+		width: 100%;
+	}
+
+	.ourHistoryBody .col2 {
+		flex-direction: column;
+		width: 100%;
+		margin-left: 10px;
+		margin-right: 10px;
+
+
+
+	}
+}
+
+	@media secreen and (max-width: 720px) {
+
+  header.container{
+  	flex-direction: column;
+  	justify-content:center;
+  	align-items: center;
+    	  
+    }
+
+header .logo {
+	margin: 0 auto;
+
+}
+.caption h1 {
+
+
+		font-size: 32px;
+		letter-spacing: 2px;
+
+		
+	}
+
+	.featuresBody .container {
+
+		flex-direction: column;
+
+
+	}
+
+	.featuresBody .container .col3 {
+
+		width: 80%;
+		margin: 0 auto;
+
+	}
+
+	.engineBody .container {
+
+		flex-direction: column;
+
+	}
+
+	.engineBody .container .col2{
+      width: 80%;
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0;
+
+
+	}
+
+	footer .container {
+		flex-direction: column;
+	}
+
+	footer .container .col3 {
+    width: 100%;
+
+	}
+
+
+	.sectionHeader {
+
+		font-size: 24px;
+
+	}
+
+    .inspectBody .container .col2{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+   .teamMemberInfo {
+   	font-size: 14px;
+   	padding: 10px;
+
+   } 
+
+   .teamTitle {
+   	font-size: 14px;
+
+   }
+
+
+   .formShape{
+
+   	display: none;
+
+   }
+
+   @media secreen and (max-width: 540px) {
+  .caption h1 {
+  color: red;
+  font-size: 20px;
+  letter-spacing: 0px;
+
+
+
+}
+
+   }
+
+   .featuresBody .container .col3 {
+
+		width: 80%;
+		margin: 0 auto;
+
+	}
+
+
+
+	.engineBody .container .col2{
+      width: 100%;
+      
+
+	}
+
+	.sectionHeader {
+
+		font-size: 20px;
+
+	}
+
+	.contactForm {
+		width: 80%;
+
+	}
+}
